@@ -48,7 +48,6 @@ import AsideBar from "../components/AsideBar.vue";
 import Logo from "../components/Logo.vue";
 import FooterComponent from "../components/FooterComponent.vue";
 import Articles from "../components/Articles.vue";
-import axios from "axios";
 export default {
   name: "HomeView",
   components: {

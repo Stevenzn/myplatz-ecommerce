@@ -116,7 +116,7 @@ export default {
         return;
       } else {
         const response = await axios.post(
-          enviroment.URL_API + "course",
+          enviroment.URL_API + "product",
           {
             name: this.name,
             price: this.price,

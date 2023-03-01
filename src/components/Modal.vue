@@ -77,7 +77,7 @@ export default {
     },
     async buyCourse() {
       const response = await axios.post(
-        enviroment.URL_API + "course/" + this.course_id,
+        enviroment.URL_API + "product/" + this.course_id,
         {
           exp_month: this.exp_month,
           exp_year: this.exp_year,
@@ -103,7 +103,6 @@ export default {
         .then(() => {
           location.reload();
         });
-      console.log(response);
     },
   },
 };

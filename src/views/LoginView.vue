@@ -68,16 +68,13 @@ export default {
       });
       if (response.data.rol == "user") {
         localStorage.setItem("token", response.data.jwtoken);
-        console.log(response.data);
         this.$router.push("/courses").catch((error) => {
           let msg = error.response.data;
-          console.log(msg);
         });
       } else {
         localStorage.setItem("token", response.data.jwtoken);
         this.$router.push("/admin").catch((error) => {
           let msg = error.response.data;
-          console.log(msg);
         });
       }
     },

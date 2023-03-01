@@ -52,14 +52,13 @@ export default {
   },
   methods: {
     getCourses() {
-      axios.get(enviroment.URL_API + "course").then((response) => {
+      axios.get(enviroment.URL_API + "product").then((response) => {
         this.courses = response.data;
-        console.log(this.courses);
       });
     },
     async addArticle(id) {
       const response = await axios.post(
-        enviroment.URL_API + "car",
+        enviroment.URL_API + "cart",
         { id },
         {
           headers: {
@@ -90,11 +89,8 @@ export default {
             timer: 1000,
           })
           .then(() => {
-            console.log(response.data)
           });
       }
-      console.log(response.status)
-      console.log(response);
     },
   },
 };

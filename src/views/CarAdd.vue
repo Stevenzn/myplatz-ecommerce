@@ -106,7 +106,7 @@ export default {
       this.$router.push("/");
     },
     async getCartShopping() {
-      const response = await axios.get(enviroment.URL_API + "car", {
+      const response = await axios.get(enviroment.URL_API + "cart", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
@@ -114,7 +114,7 @@ export default {
       this.coursesCart = response.data;
     },
     async deleteItem(id) {
-      const response = await axios.delete(enviroment.URL_API + "car/" + id, {
+      const response = await axios.delete(enviroment.URL_API + "cart/" + id, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
@@ -137,7 +137,7 @@ export default {
     
 
     async deleteAll() {
-      const response = await axios.delete(enviroment.URL_API + "car/", {
+      const response = await axios.delete(enviroment.URL_API + "cart/", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
